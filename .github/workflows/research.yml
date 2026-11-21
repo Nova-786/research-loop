@@ -1,0 +1,78 @@
+name: research-loop
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"     # every 6 hours; edit to taste
+  workflow_dispatch:            # lets you run it manually from the Actions tab
+
+permissions:
+  contents: write               # commit results back
+  actions: write                # self-disable when the search has finished
+  pages: write
+  id-token: write
+
+concurrency:
+  group: research-loop
+  cancel-in-progress: false     # never run two loops on the same state at once
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30         # hard ceiling on minutes burned per run
+    outputs:
+      all_finished: ${{ steps.run.outputs.all_finished }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Run a bounded batch of experiments
+        id: run
+        env:
+          # Optional LLM proposer. Leave unset to stay 100% free.
+          # Enable: add secret ANTHROPIC_API_KEY and repo variable USE_LLM=1
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          USE_LLM: ${{ vars.USE_LLM }}
+          LLM_MAX_CALLS: ${{ vars.LLM_MAX_CALLS }}
+        run: python run_scheduled.py --per-run 50 --time-limit 600 --max-total 300 --patience 60
+
+      - name: Build progress page
+        run: python build_site.py
+
+      - name: Commit results back to the repo
+        run: |
+          git config user.name "research-bot"
+          git config user.email "research-bot@users.noreply.github.com"
+          git add results docs
+          if git diff --cached --quiet; then
+            echo "no changes to commit"
+          else
+            git commit -m "research: update results"
+            git pull --rebase
+            git push
+          fi
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: Stop condition reached, disable the schedule
+        if: steps.run.outputs.all_finished == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow disable research.yml
+
+  deploy:
+    needs: research
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
