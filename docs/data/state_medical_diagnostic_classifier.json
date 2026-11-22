@@ -2,7 +2,7 @@
  "domain": "medical_diagnostic_classifier",
  "status": "running",
  "stop_reason": null,
- "runs": 1,
+ "runs": 2,
  "history": [
   {
    "idx": 0,
@@ -1023,21 +1023,1021 @@
    },
    "kept": false,
    "seconds": 0.057
+  },
+  {
+   "idx": 51,
+   "config": {
+    "model": "svm",
+    "k_features": 30,
+    "C": 0.13219191524807697,
+    "n_estimators": 100,
+    "max_depth": 3,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 1
+   },
+   "rationale": "local mutation of incumbent #44: tweak C, k_features (step=0.19)",
+   "val": {
+    "score": 0.9818660911140727,
+    "auroc": 0.9871747126436782,
+    "auroc_std": 0.010617243059210756
+   },
+   "kept": false,
+   "seconds": 0.139
+  },
+  {
+   "idx": 52,
+   "config": {
+    "model": "svm",
+    "k_features": 28,
+    "C": 0.8644818149172135,
+    "n_estimators": 100,
+    "max_depth": 3,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 0
+   },
+   "rationale": "local mutation of incumbent #44: tweak class_weight_balanced (step=0.18)",
+   "val": {
+    "score": 0.9926737557488992,
+    "auroc": 0.9956758620689655,
+    "auroc_std": 0.006004212640132738
+   },
+   "kept": false,
+   "seconds": 0.094
+  },
+  {
+   "idx": 53,
+   "config": {
+    "model": "svm",
+    "k_features": 29,
+    "C": 0.0028037507743443836,
+    "n_estimators": 217,
+    "max_depth": 5,
+    "learning_rate": 0.3961739588069376,
+    "class_weight_balanced": 1
+   },
+   "rationale": "random restart: explore a new region of the search space",
+   "val": {
+    "score": 0.9713489435967574,
+    "auroc": 0.9785586206896552,
+    "auroc_std": 0.014419354185795574
+   },
+   "kept": false,
+   "seconds": 0.207
+  },
+  {
+   "idx": 54,
+   "config": {
+    "model": "svm",
+    "k_features": 28,
+    "C": 0.8644818149172135,
+    "n_estimators": 39,
+    "max_depth": 3,
+    "learning_rate": 0.08976619534986577,
+    "class_weight_balanced": 1
+   },
+   "rationale": "local mutation of incumbent #44: tweak learning_rate, n_estimators (step=0.18)",
+   "val": {
+    "score": 0.993489950592242,
+    "auroc": 0.9962804597701149,
+    "auroc_std": 0.005581018355745768
+   },
+   "kept": false,
+   "seconds": 0.1
+  },
+  {
+   "idx": 55,
+   "config": {
+    "model": "svm",
+    "k_features": 28,
+    "C": 0.8644818149172135,
+    "n_estimators": 105,
+    "max_depth": 3,
+    "learning_rate": 0.5,
+    "class_weight_balanced": 1
+   },
+   "rationale": "local mutation of incumbent #44: tweak class_weight_balanced, n_estimators, learning_rate (step=0.18)",
+   "val": {
+    "score": 0.993489950592242,
+    "auroc": 0.9962804597701149,
+    "auroc_std": 0.005581018355745768
+   },
+   "kept": false,
+   "seconds": 0.099
+  },
+  {
+   "idx": 56,
+   "config": {
+    "model": "svm",
+    "k_features": 29,
+    "C": 0.8644818149172135,
+    "n_estimators": 100,
+    "max_depth": 3,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 0
+   },
+   "rationale": "local mutation of incumbent #44: tweak class_weight_balanced, k_features (step=0.18)",
+   "val": {
+    "score": 0.9914178743022787,
+    "auroc": 0.9949954022988508,
+    "auroc_std": 0.00715505599314418
+   },
+   "kept": false,
+   "seconds": 0.096
+  },
+  {
+   "idx": 57,
+   "config": {
+    "model": "svm",
+    "k_features": 12,
+    "C": 0.16315020315226797,
+    "n_estimators": 93,
+    "max_depth": 4,
+    "learning_rate": 0.28066429240001345,
+    "class_weight_balanced": 0
+   },
+   "rationale": "random restart: explore a new region of the search space",
+   "val": {
+    "score": 0.9758678574418131,
+    "auroc": 0.9826574712643679,
+    "auroc_std": 0.013579227645109484
+   },
+   "kept": false,
+   "seconds": 0.084
+  },
+  {
+   "idx": 58,
+   "config": {
+    "model": "svm",
+    "k_features": 28,
+    "C": 0.8644818149172135,
+    "n_estimators": 100,
+    "max_depth": 3,
+    "learning_rate": 0.21602330213815008,
+    "class_weight_balanced": 1
+   },
+   "rationale": "local mutation of incumbent #44: tweak learning_rate (step=0.18)",
+   "val": {
+    "score": 0.993489950592242,
+    "auroc": 0.9962804597701149,
+    "auroc_std": 0.005581018355745768
+   },
+   "kept": false,
+   "seconds": 0.101
+  },
+  {
+   "idx": 59,
+   "config": {
+    "model": "svm",
+    "k_features": 28,
+    "C": 0.8644818149172135,
+    "n_estimators": 100,
+    "max_depth": 3,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 1
+   },
+   "rationale": "local mutation of incumbent #44: tweak max_depth (step=0.18)",
+   "val": {
+    "score": 0.993489950592242,
+    "auroc": 0.9962804597701149,
+    "auroc_std": 0.005581018355745768
+   },
+   "kept": false,
+   "seconds": 0.1
+  },
+  {
+   "idx": 60,
+   "config": {
+    "model": "svm",
+    "k_features": 8,
+    "C": 0.010222485784900285,
+    "n_estimators": 118,
+    "max_depth": 1,
+    "learning_rate": 0.1117279480138373,
+    "class_weight_balanced": 1
+   },
+   "rationale": "random restart: explore a new region of the search space",
+   "val": {
+    "score": 0.9765693800584127,
+    "auroc": 0.9824413793103448,
+    "auroc_std": 0.011743998503864272
+   },
+   "kept": false,
+   "seconds": 0.144
+  },
+  {
+   "idx": 61,
+   "config": {
+    "model": "svm",
+    "k_features": 30,
+    "C": 0.8644818149172135,
+    "n_estimators": 100,
+    "max_depth": 3,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 1
+   },
+   "rationale": "local mutation of incumbent #44: tweak k_features (step=0.17)",
+   "val": {
+    "score": 0.992038539462125,
+    "auroc": 0.9955310344827586,
+    "auroc_std": 0.006984990041267198
+   },
+   "kept": false,
+   "seconds": 0.104
+  },
+  {
+   "idx": 62,
+   "config": {
+    "model": "svm",
+    "k_features": 28,
+    "C": 0.8644818149172135,
+    "n_estimators": 100,
+    "max_depth": 3,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 0
+   },
+   "rationale": "local mutation of incumbent #44: tweak class_weight_balanced (step=0.17)",
+   "val": {
+    "score": 0.9926737557488992,
+    "auroc": 0.9956758620689655,
+    "auroc_std": 0.006004212640132738
+   },
+   "kept": false,
+   "seconds": 0.094
+  },
+  {
+   "idx": 63,
+   "config": {
+    "model": "svm",
+    "k_features": 27,
+    "C": 0.8644818149172135,
+    "n_estimators": 180,
+    "max_depth": 3,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 1
+   },
+   "rationale": "local mutation of incumbent #44: tweak max_depth, k_features, n_estimators (step=0.17)",
+   "val": {
+    "score": 0.9919791325577684,
+    "auroc": 0.9955908045977011,
+    "auroc_std": 0.00722334407986556
+   },
+   "kept": false,
+   "seconds": 0.099
+  },
+  {
+   "idx": 64,
+   "config": {
+    "model": "svm",
+    "k_features": 26,
+    "C": 0.8644818149172135,
+    "n_estimators": 103,
+    "max_depth": 3,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 1
+   },
+   "rationale": "local mutation of incumbent #44: tweak k_features, n_estimators, class_weight_balanced (step=0.17)",
+   "val": {
+    "score": 0.992540423184545,
+    "auroc": 0.995735632183908,
+    "auroc_std": 0.006390417998725973
+   },
+   "kept": false,
+   "seconds": 0.096
+  },
+  {
+   "idx": 65,
+   "config": {
+    "model": "svm",
+    "k_features": 28,
+    "C": 0.13736901203686305,
+    "n_estimators": 34,
+    "max_depth": 3,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 1
+   },
+   "rationale": "local mutation of incumbent #44: tweak C, max_depth, n_estimators (step=0.17)",
+   "val": {
+    "score": 0.9829363492874311,
+    "auroc": 0.9881241379310346,
+    "auroc_std": 0.010375577287207024
+   },
+   "kept": false,
+   "seconds": 0.128
+  },
+  {
+   "idx": 66,
+   "config": {
+    "model": "svm",
+    "k_features": 28,
+    "C": 0.8644818149172135,
+    "n_estimators": 56,
+    "max_depth": 3,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 1
+   },
+   "rationale": "local mutation of incumbent #44: tweak n_estimators (step=0.17)",
+   "val": {
+    "score": 0.993489950592242,
+    "auroc": 0.9962804597701149,
+    "auroc_std": 0.005581018355745768
+   },
+   "kept": false,
+   "seconds": 0.1
+  },
+  {
+   "idx": 67,
+   "config": {
+    "model": "svm",
+    "k_features": 28,
+    "C": 0.8644818149172135,
+    "n_estimators": 100,
+    "max_depth": 3,
+    "learning_rate": 0.2175184088637544,
+    "class_weight_balanced": 1
+   },
+   "rationale": "local mutation of incumbent #44: tweak learning_rate (step=0.17)",
+   "val": {
+    "score": 0.993489950592242,
+    "auroc": 0.9962804597701149,
+    "auroc_std": 0.005581018355745768
+   },
+   "kept": false,
+   "seconds": 0.1
+  },
+  {
+   "idx": 68,
+   "config": {
+    "model": "logreg",
+    "k_features": 3,
+    "C": 9.676471376039686,
+    "n_estimators": 91,
+    "max_depth": 5,
+    "learning_rate": 0.02293031407440307,
+    "class_weight_balanced": 1
+   },
+   "rationale": "random restart: explore a new region of the search space",
+   "val": {
+    "score": 0.9777517282791767,
+    "auroc": 0.9834942528735633,
+    "auroc_std": 0.011485049188773288
+   },
+   "kept": false,
+   "seconds": 0.074
+  },
+  {
+   "idx": 69,
+   "config": {
+    "model": "svm",
+    "k_features": 28,
+    "C": 1.1701103246601599,
+    "n_estimators": 100,
+    "max_depth": 3,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 1
+   },
+   "rationale": "local mutation of incumbent #44: tweak C, class_weight_balanced (step=0.16)",
+   "val": {
+    "score": 0.9940166380680012,
+    "auroc": 0.9965517241379311,
+    "auroc_std": 0.005070172139859811
+   },
+   "kept": true,
+   "seconds": 0.12
+  },
+  {
+   "idx": 70,
+   "config": {
+    "model": "rf",
+    "k_features": 22,
+    "C": 0.14425488841547232,
+    "n_estimators": 100,
+    "max_depth": 3,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 1
+   },
+   "rationale": "local mutation of incumbent #69: tweak model, C, k_features (step=0.16)",
+   "val": {
+    "score": 0.9896174472221021,
+    "auroc": 0.9919793103448274,
+    "auroc_std": 0.004723726245450753
+   },
+   "kept": false,
+   "seconds": 0.999
+  },
+  {
+   "idx": 71,
+   "config": {
+    "model": "svm",
+    "k_features": 28,
+    "C": 1.1701103246601599,
+    "n_estimators": 20,
+    "max_depth": 3,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 1
+   },
+   "rationale": "local mutation of incumbent #69: tweak n_estimators (step=0.16)",
+   "val": {
+    "score": 0.9940166380680012,
+    "auroc": 0.9965517241379311,
+    "auroc_std": 0.005070172139859811
+   },
+   "kept": false,
+   "seconds": 0.098
+  },
+  {
+   "idx": 72,
+   "config": {
+    "model": "svm",
+    "k_features": 30,
+    "C": 1.1701103246601599,
+    "n_estimators": 100,
+    "max_depth": 3,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 1
+   },
+   "rationale": "local mutation of incumbent #69: tweak k_features (step=0.16)",
+   "val": {
+    "score": 0.9925893506069856,
+    "auroc": 0.9958689655172414,
+    "auroc_std": 0.006559229820511533
+   },
+   "kept": false,
+   "seconds": 0.101
+  },
+  {
+   "idx": 73,
+   "config": {
+    "model": "gb",
+    "k_features": 28,
+    "C": 1.1701103246601599,
+    "n_estimators": 100,
+    "max_depth": 3,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 1
+   },
+   "rationale": "local mutation of incumbent #69: tweak model (step=0.16)",
+   "val": {
+    "score": 0.9901203984734243,
+    "auroc": 0.9927862068965517,
+    "auroc_std": 0.005331616846255019
+   },
+   "kept": false,
+   "seconds": 1.808
+  },
+  {
+   "idx": 74,
+   "config": {
+    "model": "logreg",
+    "k_features": 28,
+    "C": 94.39225829377295,
+    "n_estimators": 100,
+    "max_depth": 3,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 1
+   },
+   "rationale": "local mutation of incumbent #69: tweak k_features, model, C (step=0.16)",
+   "val": {
+    "score": 0.9875820766925983,
+    "auroc": 0.9918873563218391,
+    "auroc_std": 0.008610559258481624
+   },
+   "kept": false,
+   "seconds": 0.099
+  },
+  {
+   "idx": 75,
+   "config": {
+    "model": "svm",
+    "k_features": 28,
+    "C": 1.1701103246601599,
+    "n_estimators": 96,
+    "max_depth": 3,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 1
+   },
+   "rationale": "local mutation of incumbent #69: tweak n_estimators (step=0.16)",
+   "val": {
+    "score": 0.9940166380680012,
+    "auroc": 0.9965517241379311,
+    "auroc_std": 0.005070172139859811
+   },
+   "kept": false,
+   "seconds": 0.12
+  },
+  {
+   "idx": 76,
+   "config": {
+    "model": "svm",
+    "k_features": 28,
+    "C": 1.1701103246601599,
+    "n_estimators": 100,
+    "max_depth": 3,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 0
+   },
+   "rationale": "local mutation of incumbent #69: tweak class_weight_balanced (step=0.15)",
+   "val": {
+    "score": 0.9939840472380685,
+    "auroc": 0.9964850574712644,
+    "auroc_std": 0.005002020466391716
+   },
+   "kept": false,
+   "seconds": 0.092
+  },
+  {
+   "idx": 77,
+   "config": {
+    "model": "svm",
+    "k_features": 28,
+    "C": 10.060649505972822,
+    "n_estimators": 100,
+    "max_depth": 3,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 1
+   },
+   "rationale": "local mutation of incumbent #69: tweak C (step=0.15)",
+   "val": {
+    "score": 0.9941221721048906,
+    "auroc": 0.9964229885057472,
+    "auroc_std": 0.004601632801713105
+   },
+   "kept": true,
+   "seconds": 0.09
+  },
+  {
+   "idx": 78,
+   "config": {
+    "model": "svm",
+    "k_features": 21,
+    "C": 10.060649505972822,
+    "n_estimators": 100,
+    "max_depth": 2,
+    "learning_rate": 0.12670105389809946,
+    "class_weight_balanced": 1
+   },
+   "rationale": "local mutation of incumbent #77: tweak k_features, max_depth, learning_rate (step=0.15)",
+   "val": {
+    "score": 0.9920424235019395,
+    "auroc": 0.9948735632183908,
+    "auroc_std": 0.005662279432902593
+   },
+   "kept": false,
+   "seconds": 0.079
+  },
+  {
+   "idx": 79,
+   "config": {
+    "model": "gb",
+    "k_features": 28,
+    "C": 10.060649505972822,
+    "n_estimators": 154,
+    "max_depth": 3,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 1
+   },
+   "rationale": "local mutation of incumbent #77: tweak model, n_estimators (step=0.15)",
+   "val": {
+    "score": 0.9904788953823234,
+    "auroc": 0.9929816091954022,
+    "auroc_std": 0.005005427626157707
+   },
+   "kept": false,
+   "seconds": 2.669
+  },
+  {
+   "idx": 80,
+   "config": {
+    "model": "svm",
+    "k_features": 28,
+    "C": 10.060649505972822,
+    "n_estimators": 135,
+    "max_depth": 3,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 1
+   },
+   "rationale": "local mutation of incumbent #77: tweak n_estimators (step=0.15)",
+   "val": {
+    "score": 0.9941221721048906,
+    "auroc": 0.9964229885057472,
+    "auroc_std": 0.004601632801713105
+   },
+   "kept": false,
+   "seconds": 0.09
+  },
+  {
+   "idx": 81,
+   "config": {
+    "model": "gb",
+    "k_features": 28,
+    "C": 10.060649505972822,
+    "n_estimators": 100,
+    "max_depth": 3,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 1
+   },
+   "rationale": "local mutation of incumbent #77: tweak model (step=0.15)",
+   "val": {
+    "score": 0.9901203984734243,
+    "auroc": 0.9927862068965517,
+    "auroc_std": 0.005331616846255019
+   },
+   "kept": false,
+   "seconds": 1.792
+  },
+  {
+   "idx": 82,
+   "config": {
+    "model": "svm",
+    "k_features": 28,
+    "C": 10.060649505972822,
+    "n_estimators": 100,
+    "max_depth": 1,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 0
+   },
+   "rationale": "local mutation of incumbent #77: tweak class_weight_balanced, max_depth (step=0.15)",
+   "val": {
+    "score": 0.9946249119114597,
+    "auroc": 0.9966942528735633,
+    "auroc_std": 0.004138681924207046
+   },
+   "kept": true,
+   "seconds": 0.087
+  },
+  {
+   "idx": 83,
+   "config": {
+    "model": "svm",
+    "k_features": 28,
+    "C": 0.4427460306738957,
+    "n_estimators": 100,
+    "max_depth": 2,
+    "learning_rate": 0.3104829996006705,
+    "class_weight_balanced": 0
+   },
+   "rationale": "local mutation of incumbent #82: tweak max_depth, C, learning_rate (step=0.15)",
+   "val": {
+    "score": 0.9909192452347314,
+    "auroc": 0.9942,
+    "auroc_std": 0.006561509530537061
+   },
+   "kept": false,
+   "seconds": 0.1
+  },
+  {
+   "idx": 84,
+   "config": {
+    "model": "svm",
+    "k_features": 14,
+    "C": 49.65583239371654,
+    "n_estimators": 179,
+    "max_depth": 2,
+    "learning_rate": 0.014655385385090217,
+    "class_weight_balanced": 1
+   },
+   "rationale": "random restart: explore a new region of the search space",
+   "val": {
+    "score": 0.9898602517824446,
+    "auroc": 0.9923931034482759,
+    "auroc_std": 0.005065703331662627
+   },
+   "kept": false,
+   "seconds": 0.082
+  },
+  {
+   "idx": 85,
+   "config": {
+    "model": "svm",
+    "k_features": 28,
+    "C": 1.047109610528475,
+    "n_estimators": 100,
+    "max_depth": 1,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 0
+   },
+   "rationale": "local mutation of incumbent #82: tweak C (step=0.14)",
+   "val": {
+    "score": 0.9935827896999693,
+    "auroc": 0.9962183908045977,
+    "auroc_std": 0.0052712022092570015
+   },
+   "kept": false,
+   "seconds": 0.093
+  },
+  {
+   "idx": 86,
+   "config": {
+    "model": "gb",
+    "k_features": 5,
+    "C": 1.3333621447036212,
+    "n_estimators": 110,
+    "max_depth": 4,
+    "learning_rate": 0.2200961532183064,
+    "class_weight_balanced": 1
+   },
+   "rationale": "random restart: explore a new region of the search space",
+   "val": {
+    "score": 0.970674348680836,
+    "auroc": 0.9782471264367816,
+    "auroc_std": 0.015145555511891019
+   },
+   "kept": false,
+   "seconds": 0.971
+  },
+  {
+   "idx": 87,
+   "config": {
+    "model": "svm",
+    "k_features": 28,
+    "C": 100.0,
+    "n_estimators": 100,
+    "max_depth": 1,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 0
+   },
+   "rationale": "local mutation of incumbent #82: tweak max_depth, C (step=0.14)",
+   "val": {
+    "score": 0.9907036986697098,
+    "auroc": 0.993919540229885,
+    "auroc_std": 0.006431683120350557
+   },
+   "kept": false,
+   "seconds": 0.085
+  },
+  {
+   "idx": 88,
+   "config": {
+    "model": "svm",
+    "k_features": 28,
+    "C": 0.5460853133644644,
+    "n_estimators": 100,
+    "max_depth": 1,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 0
+   },
+   "rationale": "local mutation of incumbent #82: tweak C (step=0.14)",
+   "val": {
+    "score": 0.9917586503797488,
+    "auroc": 0.9948735632183908,
+    "auroc_std": 0.006229825677284139
+   },
+   "kept": false,
+   "seconds": 0.097
+  },
+  {
+   "idx": 89,
+   "config": {
+    "model": "svm",
+    "k_features": 28,
+    "C": 10.060649505972822,
+    "n_estimators": 100,
+    "max_depth": 1,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 1
+   },
+   "rationale": "local mutation of incumbent #82: tweak class_weight_balanced (step=0.14)",
+   "val": {
+    "score": 0.9941221721048906,
+    "auroc": 0.9964229885057472,
+    "auroc_std": 0.004601632801713105
+   },
+   "kept": false,
+   "seconds": 0.09
+  },
+  {
+   "idx": 90,
+   "config": {
+    "model": "gb",
+    "k_features": 28,
+    "C": 10.060649505972822,
+    "n_estimators": 53,
+    "max_depth": 1,
+    "learning_rate": 0.09681754119454794,
+    "class_weight_balanced": 0
+   },
+   "rationale": "local mutation of incumbent #82: tweak learning_rate, model, n_estimators (step=0.14)",
+   "val": {
+    "score": 0.983402334283909,
+    "auroc": 0.9881563218390805,
+    "auroc_std": 0.009507975110343087
+   },
+   "kept": false,
+   "seconds": 0.495
+  },
+  {
+   "idx": 91,
+   "config": {
+    "model": "svm",
+    "k_features": 28,
+    "C": 0.5444312239519541,
+    "n_estimators": 100,
+    "max_depth": 1,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 0
+   },
+   "rationale": "local mutation of incumbent #82: tweak model, C (step=0.14)",
+   "val": {
+    "score": 0.9917586503797488,
+    "auroc": 0.9948735632183908,
+    "auroc_std": 0.006229825677284139
+   },
+   "kept": false,
+   "seconds": 0.097
+  },
+  {
+   "idx": 92,
+   "config": {
+    "model": "logreg",
+    "k_features": 28,
+    "C": 10.060649505972822,
+    "n_estimators": 61,
+    "max_depth": 1,
+    "learning_rate": 0.09405799026474912,
+    "class_weight_balanced": 0
+   },
+   "rationale": "local mutation of incumbent #82: tweak model, n_estimators, learning_rate (step=0.14)",
+   "val": {
+    "score": 0.9906251934614012,
+    "auroc": 0.9941218390804598,
+    "auroc_std": 0.006993291238117311
+   },
+   "kept": false,
+   "seconds": 0.076
+  },
+  {
+   "idx": 93,
+   "config": {
+    "model": "svm",
+    "k_features": 30,
+    "C": 2.523010123819957,
+    "n_estimators": 100,
+    "max_depth": 1,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 0
+   },
+   "rationale": "local mutation of incumbent #82: tweak C, k_features (step=0.13)",
+   "val": {
+    "score": 0.9932680748250863,
+    "auroc": 0.9962091954022988,
+    "auroc_std": 0.0058822411544249545
+   },
+   "kept": false,
+   "seconds": 0.116
+  },
+  {
+   "idx": 94,
+   "config": {
+    "model": "logreg",
+    "k_features": 27,
+    "C": 0.6213868955918773,
+    "n_estimators": 100,
+    "max_depth": 1,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 0
+   },
+   "rationale": "local mutation of incumbent #82: tweak k_features, model, C (step=0.13)",
+   "val": {
+    "score": 0.9930767187440718,
+    "auroc": 0.9959471264367815,
+    "auroc_std": 0.005740815385419577
+   },
+   "kept": false,
+   "seconds": 0.065
+  },
+  {
+   "idx": 95,
+   "config": {
+    "model": "svm",
+    "k_features": 28,
+    "C": 10.060649505972822,
+    "n_estimators": 100,
+    "max_depth": 1,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 1
+   },
+   "rationale": "local mutation of incumbent #82: tweak class_weight_balanced (step=0.13)",
+   "val": {
+    "score": 0.9941221721048906,
+    "auroc": 0.9964229885057472,
+    "auroc_std": 0.004601632801713105
+   },
+   "kept": false,
+   "seconds": 0.112
+  },
+  {
+   "idx": 96,
+   "config": {
+    "model": "svm",
+    "k_features": 30,
+    "C": 10.060649505972822,
+    "n_estimators": 100,
+    "max_depth": 1,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 0
+   },
+   "rationale": "local mutation of incumbent #82: tweak k_features (step=0.13)",
+   "val": {
+    "score": 0.9927673887682391,
+    "auroc": 0.9955517241379311,
+    "auroc_std": 0.005568670739384112
+   },
+   "kept": false,
+   "seconds": 0.09
+  },
+  {
+   "idx": 97,
+   "config": {
+    "model": "rf",
+    "k_features": 24,
+    "C": 10.060649505972822,
+    "n_estimators": 100,
+    "max_depth": 1,
+    "learning_rate": 0.31687646745527615,
+    "class_weight_balanced": 0
+   },
+   "rationale": "local mutation of incumbent #82: tweak learning_rate, model, k_features (step=0.13)",
+   "val": {
+    "score": 0.9819285955108057,
+    "auroc": 0.9861103448275863,
+    "auroc_std": 0.008363498633561128
+   },
+   "kept": false,
+   "seconds": 0.847
+  },
+  {
+   "idx": 98,
+   "config": {
+    "model": "svm",
+    "k_features": 28,
+    "C": 10.060649505972822,
+    "n_estimators": 100,
+    "max_depth": 1,
+    "learning_rate": 0.24925087416023448,
+    "class_weight_balanced": 0
+   },
+   "rationale": "local mutation of incumbent #82: tweak class_weight_balanced, learning_rate (step=0.13)",
+   "val": {
+    "score": 0.9946249119114597,
+    "auroc": 0.9966942528735633,
+    "auroc_std": 0.004138681924207046
+   },
+   "kept": false,
+   "seconds": 0.087
+  },
+  {
+   "idx": 99,
+   "config": {
+    "model": "svm",
+    "k_features": 5,
+    "C": 0.002384820701345835,
+    "n_estimators": 164,
+    "max_depth": 8,
+    "learning_rate": 0.05034802765804223,
+    "class_weight_balanced": 1
+   },
+   "rationale": "random restart: explore a new region of the search space",
+   "val": {
+    "score": 0.9783526673264704,
+    "auroc": 0.983951724137931,
+    "auroc_std": 0.01119811362292111
+   },
+   "kept": false,
+   "seconds": 0.147
+  },
+  {
+   "idx": 100,
+   "config": {
+    "model": "svm",
+    "k_features": 28,
+    "C": 10.060649505972822,
+    "n_estimators": 88,
+    "max_depth": 1,
+    "learning_rate": 0.22034784216528244,
+    "class_weight_balanced": 0
+   },
+   "rationale": "local mutation of incumbent #82: tweak class_weight_balanced, n_estimators, max_depth (step=0.12)",
+   "val": {
+    "score": 0.9946249119114597,
+    "auroc": 0.9966942528735633,
+    "auroc_std": 0.004138681924207046
+   },
+   "kept": false,
+   "seconds": 0.088
   }
  ],
- "best_idx": 44,
+ "best_idx": 82,
  "llm_calls": 0,
- "total_seconds": 6.8,
+ "total_seconds": 20.8,
  "baseline_test": null,
  "best_test": null,
  "best_config": {
   "model": "svm",
   "k_features": 28,
-  "C": 0.8644818149172135,
+  "C": 10.060649505972822,
   "n_estimators": 100,
-  "max_depth": 3,
+  "max_depth": 1,
   "learning_rate": 0.22034784216528244,
-  "class_weight_balanced": 1
+  "class_weight_balanced": 0
  },
- "updated": "2026-11-21T18:46:04+00:00"
+ "updated": "2026-11-22T06:48:03+00:00"
 }
